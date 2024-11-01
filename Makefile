@@ -27,7 +27,7 @@ setup-cluster:
 
 .PHONY: set-hostname
 set-hostname: 
-	echo -n "10.211.55.70 " | sudo tee -a /etc/hosts && echo "kubeinvaders.local" | sudo tee -a /etc/hosts && echo -n "10.211.55.70 " | sudo tee -a /etc/hosts && echo -n "nginx.local" | sudo tee -a /etc/hosts 
+	echo -n "10.211.55.70 " | sudo tee -a /etc/hosts && echo "kubeinvaders.local" | sudo tee -a /etc/hosts && echo -n "10.211.55.70 " | sudo tee -a /etc/hosts && echo "nginx.local" | sudo tee -a /etc/hosts 
 
 .PHONY: setup
 setup: init-cluster setup-cluster set-hostname
