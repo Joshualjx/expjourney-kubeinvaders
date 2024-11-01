@@ -16,6 +16,12 @@ Simple setup of Kubeinvaders using minikube
 
 ## Walkthrough
 
+Run
+
+```make helm-prep```
+
+To add the helm repository.
+
 ### One line set up
 
 Run 

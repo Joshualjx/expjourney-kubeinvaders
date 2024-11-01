@@ -1,9 +1,12 @@
 kubernetes-version?=v1.26.3
 driver?=docker
 memory?=2048
-cpu?=4
+cpu?=2
 nodes?=1
 
+.PHONY: helm-prep
+helm-prep:
+	helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/ && helm repo update
 
 .PHONY: init-cluster
 init-cluster:

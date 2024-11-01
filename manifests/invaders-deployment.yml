@@ -17,7 +17,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 10 # tells deployment to run 20 pods matching the template
+  replicas: 15 # tells deployment to run 20 pods matching the template
   template:
     metadata:
       labels:
