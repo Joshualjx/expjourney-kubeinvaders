@@ -79,6 +79,16 @@ and check the following entries is in the /etc/hosts file:
 
 More about minikube ip command [here](https://minikube.sigs.k8s.io/docs/commands/ip/)
 
+### Forwarding to localhost
+
+If you are running this in a minikube cluster, you can access the application at kubeinvaders.local.
+
+If you want access it through a localhost endpoint instead, run the following command. (The following example forwards the application to port 8888 on your localhost)
+
+
+```kubectl port-forward --address 0.0.0.0 svc/kubeinvaders -n kubeinvaders 8888:80```
+
+
 Now you can visit the kubeinvaders.local page and have fun!
 
 
