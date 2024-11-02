@@ -23,7 +23,8 @@ init-cluster:
 .PHONY: setup-cluster
 setup-cluster: 
 	kubectl apply -f manifests && helm install kubeinvaders --set-string config.target_namespace="namespace1" \
-	-n kubeinvaders kubeinvaders/kubeinvaders --set ingress.enabled=true --set ingress.hostName=kubeinvaders.local --set deployment.image.tag=v1.9.6 && minikube addons enable ingress
+	-n kubeinvaders kubeinvaders/kubeinvaders --set ingress.enabled=true --set ingress.hostName=kubeinvaders.local --set ingress.tls_enabled=false --set deployment.image.tag=v1.9.6 && kubectl set env deployment/kubeinvaders INSECURE_ENDPOINT=true -n kubeinvaders \
+	&& minikube addons enable ingress
 
 .PHONY: set-hostname
 set-hostname: 
