@@ -151,3 +151,7 @@ kubectl create ns namespace2
 helm install kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" \
 -n kubeinvaders kubeinvaders/kubeinvaders --set ingress.enabled=true --set ingress.hostName=kubeinvaders.io --set deployment.image.tag=latest
 ```
+
+### To uninstall
+
+```/usr/local/bin/k3s-uninstall.sh```
